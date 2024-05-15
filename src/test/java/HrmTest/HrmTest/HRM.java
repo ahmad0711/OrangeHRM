@@ -27,50 +27,28 @@ public class HRM {
 
 		driver.get(url);
 
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 	}
-
-	//	Start Test Cases Here 
-
-	@Test (priority = 2)
-
-	public void loginValid() {
-
+	
+	public void login(){
+		
 		driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("Admin");
 
 		driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("admin123");
 
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
-
-
-
-		String pageTitle = driver.getTitle();
-
-		/*	if (pageTitle.equals("OrangeHRM")) {
-
-		System.out.println("Your test case is passed");
-	} else {
-
-		System.out.println("Your test case is failed");
-	} */
-
-		//	we can also use assertions of validate test 
-
-
-		Assert.assertEquals("OrangeHRM", pageTitle);
-
 		
-
 	}
-	
-	public void logout() {
+
+	public void logOut() {
 		
 		driver.findElement(By.xpath("//span[@class='oxd-userdropdown-tab']")).click();
 
-		driver.findElement(By.xpath("//a[normalize-space()='Logout']"));
-		
+		driver.findElement(By.xpath("//a[normalize-space()='Logout']")).click();
 	}
+	
+	//	Start Test Cases Here 
 
 	@Test (priority = 1)
 
@@ -88,16 +66,83 @@ public class HRM {
 
 		Assert.assertTrue(ErrorMessage.contains(mesageAct));
 	}
+	
+//	Check with valid credential 
+
+	@Test (priority = 2)
+
+	public void loginValid() {
+
+		login();
+
+		String pageTitle = driver.getTitle();
+
+		/*	if (pageTitle.equals("OrangeHRM")) {
+
+		System.out.println("Your test case is passed");
+	} else {
+
+		System.out.println("Your test case is failed");
+	} */
+
+		//	we can also use assertions of validate test 
+
+
+		Assert.assertEquals("OrangeHRM", pageTitle);
+		
+		logOut();
+		
+	}
+	
+	
+//	Add Employee 
+	
+	@Test (priority = 3)
+	
+	public void addEmployee() throws InterruptedException {
+		
+//		For Login 
+		
+		login();
+		
+		Thread.sleep(3000);
+		
+//		For Add Employee 
+		
+		driver.findElement(By.xpath("//span[text()='PIM']")).click();
+
+		driver.findElement(By.xpath("//a[text()='Add Employee']")).click();
+		
+		driver.findElement(By.xpath("//input[@placeholder='First Name']")).sendKeys("Ahmad");
+		
+		driver.findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys("Ch");
+		
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		
+//		String detailPage = "Personal Details";
+
+		String mesageAct = driver.findElement(By.xpath("//h6[normalize-space()='Personal Details']")).getText();
+
+		Assert.assertEquals("Personal Details", mesageAct);
+		
+//		Assert.assertTrue(detailPage.contains(mesageAct));
+		
+		
+		
+//		For Logout
+		
+		logOut();
+		
+	}
+	
 
 	@AfterTest 
 
 	public void tearDown() throws InterruptedException {
 
-
-		
-		logout();
 		
 		Thread.sleep(5000);
+
 		driver.close();
 		driver.quit();
 	}
