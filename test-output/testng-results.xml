@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-15T21:09:50 PKT" name="Default suite" finished-at="2024-05-15T21:11:10 PKT" duration-ms="80047">
+  <suite started-at="2024-05-15T21:43:01 PKT" name="Default suite" finished-at="2024-05-15T21:43:42 PKT" duration-ms="40756">
     <groups>
     </groups>
-    <test started-at="2024-05-15T21:09:50 PKT" name="Default test" finished-at="2024-05-15T21:11:10 PKT" duration-ms="80047">
+    <test started-at="2024-05-15T21:43:01 PKT" name="Default test" finished-at="2024-05-15T21:43:42 PKT" duration-ms="40756">
       <class name="HrmTest.HrmTest.HRM">
-        <test-method is-config="true" signature="setup()[pri:0, instance:HrmTest.HrmTest.HRM@35cabb2a]" started-at="2024-05-15T21:09:50 PKT" name="setup" finished-at="2024-05-15T21:10:35 PKT" duration-ms="44764" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:HrmTest.HrmTest.HRM@7e07db1f]" started-at="2024-05-15T21:43:01 PKT" name="setup" finished-at="2024-05-15T21:43:09 PKT" duration-ms="8037" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="invalidLogin()[pri:1, instance:HrmTest.HrmTest.HRM@35cabb2a]" started-at="2024-05-15T21:10:35 PKT" name="invalidLogin" finished-at="2024-05-15T21:10:43 PKT" duration-ms="7466" status="PASS">
+        <test-method signature="invalidLogin()[pri:1, instance:HrmTest.HrmTest.HRM@7e07db1f]" started-at="2024-05-15T21:43:09 PKT" name="invalidLogin" finished-at="2024-05-15T21:43:11 PKT" duration-ms="2279" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidLogin -->
-        <test-method signature="loginValid()[pri:2, instance:HrmTest.HrmTest.HRM@35cabb2a]" started-at="2024-05-15T21:10:43 PKT" name="loginValid" finished-at="2024-05-15T21:10:46 PKT" duration-ms="3481" status="PASS">
+        <test-method signature="loginValid()[pri:2, instance:HrmTest.HrmTest.HRM@7e07db1f]" started-at="2024-05-15T21:43:11 PKT" name="loginValid" finished-at="2024-05-15T21:43:14 PKT" duration-ms="3115" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginValid -->
-        <test-method signature="addEmployee()[pri:3, instance:HrmTest.HrmTest.HRM@35cabb2a]" started-at="2024-05-15T21:10:46 PKT" name="addEmployee" finished-at="2024-05-15T21:11:05 PKT" duration-ms="18421" status="PASS">
+        <test-method signature="addEmployee()[pri:3, instance:HrmTest.HrmTest.HRM@7e07db1f]" started-at="2024-05-15T21:43:14 PKT" name="addEmployee" finished-at="2024-05-15T21:43:27 PKT" duration-ms="12314" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addEmployee -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:HrmTest.HrmTest.HRM@35cabb2a]" started-at="2024-05-15T21:11:05 PKT" name="tearDown" finished-at="2024-05-15T21:11:10 PKT" duration-ms="5860" status="PASS">
+        <test-method signature="searchEmployee()[pri:4, instance:HrmTest.HrmTest.HRM@7e07db1f]" started-at="2024-05-15T21:43:27 PKT" name="searchEmployee" finished-at="2024-05-15T21:43:36 PKT" duration-ms="9478" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchEmployee -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:HrmTest.HrmTest.HRM@7e07db1f]" started-at="2024-05-15T21:43:36 PKT" name="tearDown" finished-at="2024-05-15T21:43:42 PKT" duration-ms="5473" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

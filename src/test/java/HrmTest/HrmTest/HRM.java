@@ -1,5 +1,6 @@
 package HrmTest.HrmTest;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 import java.time.Duration;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -133,6 +134,30 @@ public class HRM {
 		
 		logOut();
 		
+	}
+	
+	
+	@Test (priority = 4) 
+		
+		public void searchEmployee() throws InterruptedException {
+		
+		login();
+		
+		driver.findElement(By.xpath("//span[@class='oxd-text oxd-text--span oxd-main-menu-item--name'][normalize-space()='PIM']")).click();
+		
+		driver.findElement(By.xpath("//a[normalize-space()='Employee List']")).click();
+		
+		driver.findElement(By.xpath("//div[@class='oxd-grid-4 orangehrm-full-width-grid']//div[1]//div[1]//div[2]//div[1]//div[1]//input[1]")).sendKeys("ahmad");
+		
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		
+		Thread.sleep(3000);
+		
+		String searchName = driver.findElement(By.xpath("//div[@role='rowgroup']//div[1]//div[1]//div[3]//div[1]")).getText();
+		
+		Assert.assertEquals("Ahmad", searchName);
+		
+		logOut();
 	}
 	
 

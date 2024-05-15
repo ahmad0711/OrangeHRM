@@ -7,7 +7,7 @@
         <methods>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="addEmployee"/>
+          <include name="searchEmployee"/>
         </methods>
       </class> <!-- HrmTest.HrmTest.HRM -->
     </classes>
