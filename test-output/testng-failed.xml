@@ -5,9 +5,10 @@
     <classes>
       <class name="HrmTest.HrmTest.HRM">
         <methods>
-          <include name="login"/>
           <include name="setup"/>
           <include name="tearDown"/>
+          <include name="invalidLogin"/>
+          <include name="loginValid"/>
         </methods>
       </class> <!-- HrmTest.HrmTest.HRM -->
     </classes>
